@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>Controller</key>
+	<dict>
+		<key>Request</key>
+		<array>
+			<dict>
+				<key>method</key>
+				<string></string>
+				<key>url</key>
+				<string></string>
+			</dict>
+		</array>
+		<key>ComplateName</key>
+		<string></string>
+		<key>PopControllers</key>
+		<dict/>
+	</dict>
+</dict>
+</plist>
