@@ -18,7 +18,12 @@
 
 - (void)requestGET:(NSString *)urlStr parameters:(NSDictionary *)params response:(void (^)(CCResponseMetaModel *))success {
     
-    [CCNetworkingManager sharedManager] req
+    
+}
+
+- (void)cacheRequest:(NSString *)urlStr {
+    
+    
 }
 
 @end

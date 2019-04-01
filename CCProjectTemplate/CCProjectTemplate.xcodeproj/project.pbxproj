@@ -10,6 +10,7 @@
 		88AB9B2195D83EC6AB1724B1 /* libPods-CCProjectTemplateUITests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 79042FA97BBD6CCC6AFAD43D /* libPods-CCProjectTemplateUITests.a */; };
 		AA1855E7550C57EAFE84395B /* libPods-CCProjectTemplateTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 2DB4A84623EDE90D45643AC7 /* libPods-CCProjectTemplateTests.a */; };
 		AA3373BC8A30CF07A0BB3495 /* libPods-CCProjectTemplate.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 5F1A184D4B7C4A6C044A1CF8 /* libPods-CCProjectTemplate.a */; };
+		D67F916F2249CE950027D890 /* CCUploadRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = D67F916E2249CE950027D890 /* CCUploadRequest.m */; };
 		D6B2935D2248C5F20084D777 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = D6B2935C2248C5F20084D777 /* AppDelegate.m */; };
 		D6B293602248C5F20084D777 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D6B2935F2248C5F20084D777 /* ViewController.m */; };
 		D6B293632248C5F20084D777 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D6B293612248C5F20084D777 /* Main.storyboard */; };
@@ -20,7 +21,7 @@
 		D6B293802248C5F50084D777 /* CCProjectTemplateUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = D6B2937F2248C5F50084D777 /* CCProjectTemplateUITests.m */; };
 		D6B293982248C6AA0084D777 /* CCUserManager.m in Sources */ = {isa = PBXBuildFile; fileRef = D6B293952248C6AA0084D777 /* CCUserManager.m */; };
 		D6B293992248C6AA0084D777 /* CCNetworkingManager.m in Sources */ = {isa = PBXBuildFile; fileRef = D6B293962248C6AA0084D777 /* CCNetworkingManager.m */; };
-		D6B2939E2248CDCE0084D777 /* CCPagingRequestControl.m in Sources */ = {isa = PBXBuildFile; fileRef = D6B2939D2248CDCE0084D777 /* CCPagingRequestControl.m */; };
+		D6B2939E2248CDCE0084D777 /* CCPagingRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = D6B2939D2248CDCE0084D777 /* CCPagingRequest.m */; };
 		D6B293A92248CE1F0084D777 /* CCBaseNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = D6B2939F2248CE1D0084D777 /* CCBaseNavigationController.m */; };
 		D6B293AA2248CE1F0084D777 /* CCBaseListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D6B293A12248CE1D0084D777 /* CCBaseListViewController.m */; };
 		D6B293AC2248CE1F0084D777 /* CCBaseTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = D6B293A52248CE1E0084D777 /* CCBaseTabBarController.m */; };
@@ -56,6 +57,8 @@
 		79042FA97BBD6CCC6AFAD43D /* libPods-CCProjectTemplateUITests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-CCProjectTemplateUITests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		7B92E9E2445D7BD96E6A0CB0 /* Pods-CCProjectTemplateTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CCProjectTemplateTests.release.xcconfig"; path = "Target Support Files/Pods-CCProjectTemplateTests/Pods-CCProjectTemplateTests.release.xcconfig"; sourceTree = "<group>"; };
 		B4B6F7B0FC5D9FFC18422FD4 /* Pods-CCProjectTemplateUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CCProjectTemplateUITests.debug.xcconfig"; path = "Target Support Files/Pods-CCProjectTemplateUITests/Pods-CCProjectTemplateUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		D67F916D2249CE950027D890 /* CCUploadRequest.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CCUploadRequest.h; sourceTree = "<group>"; };
+		D67F916E2249CE950027D890 /* CCUploadRequest.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CCUploadRequest.m; sourceTree = "<group>"; };
 		D6B293582248C5F20084D777 /* CCProjectTemplate.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CCProjectTemplate.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D6B2935B2248C5F20084D777 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		D6B2935C2248C5F20084D777 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -78,8 +81,8 @@
 		D6B293962248C6AA0084D777 /* CCNetworkingManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CCNetworkingManager.m; sourceTree = "<group>"; };
 		D6B293972248C6AA0084D777 /* CCRequestConfiguration.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CCRequestConfiguration.h; sourceTree = "<group>"; };
 		D6B2939A2248CD2B0084D777 /* CCConfiguration.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CCConfiguration.h; sourceTree = "<group>"; };
-		D6B2939C2248CDCE0084D777 /* CCPagingRequestControl.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CCPagingRequestControl.h; sourceTree = "<group>"; };
-		D6B2939D2248CDCE0084D777 /* CCPagingRequestControl.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CCPagingRequestControl.m; sourceTree = "<group>"; };
+		D6B2939C2248CDCE0084D777 /* CCPagingRequest.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CCPagingRequest.h; sourceTree = "<group>"; };
+		D6B2939D2248CDCE0084D777 /* CCPagingRequest.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CCPagingRequest.m; sourceTree = "<group>"; };
 		D6B2939F2248CE1D0084D777 /* CCBaseNavigationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CCBaseNavigationController.m; sourceTree = "<group>"; };
 		D6B293A02248CE1D0084D777 /* CCBaseListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CCBaseListViewController.h; sourceTree = "<group>"; };
 		D6B293A12248CE1D0084D777 /* CCBaseListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CCBaseListViewController.m; sourceTree = "<group>"; };
@@ -131,7 +134,6 @@
 				B4B6F7B0FC5D9FFC18422FD4 /* Pods-CCProjectTemplateUITests.debug.xcconfig */,
 				4F0731F7D810423E6CC42C37 /* Pods-CCProjectTemplateUITests.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -143,6 +145,22 @@
 				79042FA97BBD6CCC6AFAD43D /* libPods-CCProjectTemplateUITests.a */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		D67F916C2249BEFC0027D890 /* Networking */ = {
+			isa = PBXGroup;
+			children = (
+				D67F916D2249CE950027D890 /* CCUploadRequest.h */,
+				D67F916E2249CE950027D890 /* CCUploadRequest.m */,
+				D6B2939C2248CDCE0084D777 /* CCPagingRequest.h */,
+				D6B2939D2248CDCE0084D777 /* CCPagingRequest.m */,
+				D6B293AE2248D0340084D777 /* CCConvenientRequest.h */,
+				D6B293AF2248D0340084D777 /* CCConvenientRequest.m */,
+				D6B293932248C6A90084D777 /* CCNetworkingManager.h */,
+				D6B293962248C6AA0084D777 /* CCNetworkingManager.m */,
+				D6B293972248C6AA0084D777 /* CCRequestConfiguration.h */,
+			);
+			path = Networking;
 			sourceTree = "<group>";
 		};
 		D6B2934F2248C5F10084D777 = {
@@ -232,16 +250,10 @@
 		D6B293902248C6270084D777 /* Manager */ = {
 			isa = PBXGroup;
 			children = (
+				D67F916C2249BEFC0027D890 /* Networking */,
 				D6B2939A2248CD2B0084D777 /* CCConfiguration.h */,
-				D6B293972248C6AA0084D777 /* CCRequestConfiguration.h */,
-				D6B293932248C6A90084D777 /* CCNetworkingManager.h */,
-				D6B293962248C6AA0084D777 /* CCNetworkingManager.m */,
 				D6B293942248C6A90084D777 /* CCUserManager.h */,
 				D6B293952248C6AA0084D777 /* CCUserManager.m */,
-				D6B2939C2248CDCE0084D777 /* CCPagingRequestControl.h */,
-				D6B2939D2248CDCE0084D777 /* CCPagingRequestControl.m */,
-				D6B293AE2248D0340084D777 /* CCConvenientRequest.h */,
-				D6B293AF2248D0340084D777 /* CCConvenientRequest.m */,
 			);
 			path = Manager;
 			sourceTree = "<group>";
@@ -534,7 +546,8 @@
 				D6B293A92248CE1F0084D777 /* CCBaseNavigationController.m in Sources */,
 				D6B2936B2248C5F40084D777 /* main.m in Sources */,
 				D6B293982248C6AA0084D777 /* CCUserManager.m in Sources */,
-				D6B2939E2248CDCE0084D777 /* CCPagingRequestControl.m in Sources */,
+				D67F916F2249CE950027D890 /* CCUploadRequest.m in Sources */,
+				D6B2939E2248CDCE0084D777 /* CCPagingRequest.m in Sources */,
 				D6B2935D2248C5F20084D777 /* AppDelegate.m in Sources */,
 				D6B293992248C6AA0084D777 /* CCNetworkingManager.m in Sources */,
 			);

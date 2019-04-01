@@ -16,19 +16,31 @@
 
 @end
 
+@protocol CCRequestMaskProgressHUD <NSObject>
+
+@required
+- (void)showProgressHUD;
+- (void)showError:(NSString *)errorMsg;
+- (void)showSuccess:(NSString *)successMsg;
+
+@end
+
 @interface CCResponseMetaModel : NSObject
 
-@property (nonatomic, assign) NSInteger code;
-@property (nonatomic, strong) NSString *message;
 @property (nonatomic, strong) id rawData;
 @property (nonatomic, strong) id ripeData;
-@property (nonatomic, strong) NSURLSessionDataTask *task;
-@property (nonatomic, strong) NSError *error;
 @property (nonatomic, assign) BOOL success;
+@property (nonatomic, assign) NSInteger code;
+@property (nonatomic, strong) NSString *message;
+@property (nonatomic, strong) NSError *error;
+@property (nonatomic, strong) NSURLSessionDataTask *task;
 
 @end
 
 @interface CCConvenientRequest : NSObject
+
+@property (nonatomic, strong) id<CCRawDataProcess> dataProcess;
+@property (nonatomic, strong) id<CCRequestMaskProgressHUD> progressHUD;
 
 // 模型绑定
 - (void)requestGET:(NSString *)urlStr
