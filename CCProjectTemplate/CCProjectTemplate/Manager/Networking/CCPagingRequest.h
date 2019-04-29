@@ -17,10 +17,15 @@
 
 @optional
 - (NSDictionary *)parametersWithPagingRequest:(CCPagingRequest *)pagingRequest;
+- (NSArray *)rawDataListWithResponseObject:(id)responseObject;
+- (NSInteger)statusCodeWithResponseObject:(id)responseObject;
+- (Class)ripeDataModel;
 
 @end
 
 @interface CCPagingRequest : NSObject
+
+@property (nonatomic, strong) NSURL *url;
 
 @property (nonatomic, assign) NSInteger pageSize;
 
@@ -36,5 +41,13 @@
 - (void)firstPageRequest:(void(^)(NSMutableArray *dataSource))callback;
 
 - (void)nextPageRequest:(void(^)(NSMutableArray *dataSource))callback;
+
+// 全局配置
+// 需要获取的列表数据
++ (void)rawDataList:(NSArray *(^)(id responseObject))rawDataListHandle;
+// 需要获取的请求的状态码
++ (void)statusCode:(NSInteger(^)(id responseObject))statusCodeHandle;
+// default 200
++ (void)setSuccessStatusCode:(NSInteger)successCode;
 
 @end

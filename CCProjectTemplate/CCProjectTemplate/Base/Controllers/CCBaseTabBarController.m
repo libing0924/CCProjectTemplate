@@ -9,6 +9,11 @@
 #import "CCBaseTabBarController.h"
 #import "CCBaseNavigationController.h"
 
+#import "BSHomeViewController.h"
+#import "BSHistoryViewController.h"
+#import "BSCircleViewController.h"
+#import "BSMineViewController.h"
+
 @interface CCBaseTabBarController ()
 
 @end
@@ -18,35 +23,35 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    UIViewController *market = [[ALMarketViewController alloc] init];
-    market.title = @"Market";
-    market.tabBarItem.image = [[UIImage imageNamed:@"ic_bottom_market"] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
-    market.tabBarItem.selectedImage = [[UIImage imageNamed:@"ic_bottom_market_p"] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
-    CCBaseNavigationController *marketNavi = [[BaseNavigationController alloc] initWithRootViewController:market];
+    [self.tabBar setTranslucent:NO];
+    
+    UIViewController *market = [[BSHomeViewController alloc] init];
+    market.title = NSLocalizedString(@"Tab Home", nil);
+    market.tabBarItem.image = [[UIImage imageNamed:@"tab_bar_history_home_normal"] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
+    market.tabBarItem.selectedImage = [[UIImage imageNamed:@"tab_bar_history_home_selected"] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
 
-    UIViewController *browse = [[ALBrowseViewController alloc] init];
-    browse.title = @"Browse";
-    browse.tabBarItem.image = [[UIImage imageNamed:@"ic_bottom_browse"] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
-    browse.tabBarItem.selectedImage = [[UIImage imageNamed:@"ic_bottom_browse_p"] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
-    CCBaseNavigationController *browseNavi = [[BaseNavigationController alloc] initWithRootViewController:browse];
+    UIViewController *browse = [[BSHistoryViewController alloc] init];
+    browse.title = NSLocalizedString(@"Tab History", nil);
+    browse.tabBarItem.image = [[UIImage imageNamed:@"tab_bar_history_normal"] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
+    browse.tabBarItem.selectedImage = [[UIImage imageNamed:@"tab_bar_history_selected"] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
+    CCBaseNavigationController *browseNavi = [[CCBaseNavigationController alloc] initWithRootViewController:browse];
     
-    UIViewController *search = [[ALSearchViewController alloc] init];
-    search.title = @"Search";
-    search.tabBarItem.image = [[UIImage imageNamed:@"ic_bottom_search"] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
-    search.tabBarItem.selectedImage = [[UIImage imageNamed:@"ic_bottom_search_p"] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
-    CCBaseNavigationController *searchNavi = [[BaseNavigationController alloc] initWithRootViewController:search];
+    UIViewController *search = [[BSCircleViewController alloc] init];
+    search.title = NSLocalizedString(@"Tab Circle", nil);
+    search.tabBarItem.image = [[UIImage imageNamed:@"tab_bar_circle_normal"] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
+    search.tabBarItem.selectedImage = [[UIImage imageNamed:@"tab_bar_circle_selected"] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
+    CCBaseNavigationController *searchNavi = [[CCBaseNavigationController alloc] initWithRootViewController:search];
     
-    UIViewController *account = [[ALAccountViewController alloc] init];
-    account.title = @"Account";
-    account.tabBarItem.image = [[UIImage imageNamed:@"ic_bottom_account"] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
-    account.tabBarItem.selectedImage = [[UIImage imageNamed:@"ic_bottom_account_p"] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
-    CCBaseNavigationController *accountNavi = [[BaseNavigationController alloc] initWithRootViewController:account];
+    UIViewController *account = [[BSMineViewController alloc] init];
+    account.title = NSLocalizedString(@"Tab Mine", nil);
+    account.tabBarItem.image = [[UIImage imageNamed:@"tab_bar_history_user_normal"] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
+    account.tabBarItem.selectedImage = [[UIImage imageNamed:@"tab_bar_history_user_selected"] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
+    CCBaseNavigationController *accountNavi = [[CCBaseNavigationController alloc] initWithRootViewController:account];
 
     [[UITabBarItem appearance] setTitleTextAttributes:[NSDictionary dictionaryWithObjectsAndKeys:[UIColor colorWithHex:0X515356],NSForegroundColorAttributeName,nil]forState:UIControlStateNormal];
 
-    [[UITabBarItem appearance] setTitleTextAttributes:[NSDictionary dictionaryWithObjectsAndKeys:[UIColor colorWithHex:0xFFFFFF],NSForegroundColorAttributeName,nil]forState:UIControlStateSelected];
-    [self setViewControllers:@[marketNavi, browseNavi, searchNavi, accountNavi]];
-    
+    [[UITabBarItem appearance] setTitleTextAttributes:[NSDictionary dictionaryWithObjectsAndKeys:[UIColor colorWithHex:0x3CB5FB],NSForegroundColorAttributeName,nil]forState:UIControlStateSelected];
+    [self setViewControllers:@[market, browseNavi, searchNavi, accountNavi]];
 }
 
 @end
